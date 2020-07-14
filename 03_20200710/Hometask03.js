@@ -11,8 +11,8 @@ console.log(textOut);
 // Check the range outside
 // Write an if condition to check that age is NOT between 14 and 90 inclusively.
 // Create two variants: the first one using NOT !, the second one – without it
-let rangeStart = 14;
-let rangeEnd = 90
+const rangeStart = 14;
+const rangeEnd = 90
 num1 = +prompt("Enter your age:");
 //variant 1
 if (num1 >= rangeStart && num1 <= rangeEnd) {
@@ -34,7 +34,7 @@ console.log(textOut);
 // 0, 2, 4, 6, 8, 10
 let seqNumber = 0;
 while (seqNumber <= 10) {
-    if ((+seqNumber % 2) == 0) {
+    if (seqNumber % 2 == 0) {
         console.log(seqNumber);
     }
     seqNumber++;
@@ -46,7 +46,7 @@ while (seqNumber <= 10) {
 // 1, 3, 5, 7, 9
 seqNumber = 0;
 while (seqNumber <= 10) {
-    if ((+seqNumber % 2) !== 0) {
+    if (seqNumber % 2 !== 0) {
         console.log(seqNumber);
     }
     seqNumber++;
