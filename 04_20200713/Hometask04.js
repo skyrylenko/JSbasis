@@ -74,7 +74,7 @@ arrFunction("Do you agree?");
 function log(message, logger = console.log) {
     logger(message);
 }
-log('Hello!Log', console.log);
+log('Hello!Log');
 log('Hello!info', console.info);
 log('Hello!warn', console.warn);
 log('Hello!error', console.error);
