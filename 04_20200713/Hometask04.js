@@ -60,11 +60,12 @@ console.log(textOut);
 //     function() { alert("You canceled the execution."); }
 //   );
 
-let arrFunction = a => {
-    (confirm(a)) ? alert("You agreed.") : alert("You canceled the execution.");
-
+let ask = (a, agreed, cancel) => {
+    (confirm(a)) ? agreed() : cancel();
 };
-arrFunction("Do you agree?");
+
+
+ask("Do you agree?", () => alert("You agreed."), () => alert("You canceled the execution."));
 
 // Task 5
 // Write a function log(message, logger)
