@@ -10,10 +10,9 @@
 //******
 //let object = new Object();
 let user = {};
-user = {
-    name: "John",
-    surname: "Smith"
-};
+user.name = "John";
+user.surname = "Smith";
+
 user.name = "Pete";
 
 user.sayHi = function () {
@@ -34,13 +33,13 @@ const users = [
     { name: 'Sam', age: 52, gender: 'female' }
 ];
 
-let userArray = [];
-for (let i = 0; i < users.length; i++) {
-    userArray.push(users[i].age);
-    //console.log(users[i].age); //  age
-}
-let arraySum = userArray.reduce((accumulator, item) => accumulator + +item, 0);
-let result = arraySum / userArray.length;
+// let userArray = [];
+// for (let i = 0; i < users.length; i++) {
+//     userArray.push(users[i].age);
+// }
+//let arraySum = userArray.reduce((accumulator, item) => accumulator + +item, 0);
+let arraySum = users.reduce((accumulator, item) => accumulator + +item.age, 0);
+let result = arraySum / users.length;
 console.log(`The average age is ${result}`);
 
 
@@ -50,7 +49,7 @@ console.log(`The average age is ${result}`);
 
 function isEmptyKey(obj) {
     let internalArray = Object.keys(obj);
-    return (internalArray.length == 0) ? true : false;
+    return (internalArray.length == 0);
 }
 function isEmptyFor(obj) {
     for (let keyValue in obj) {
@@ -94,14 +93,14 @@ let calculator = {
     firstNum: 0,
     secondNum: 0,
     read: function (firstNum, secondNum) {
-        this.firstNum = prompt("Enter the first number");
-        this.secondNum = prompt("Enter the second number");
+        this.firstNum = +prompt("Enter the first number");
+        this.secondNum = +prompt("Enter the second number");
     },
     sum: function () {
-        return +this.firstNum + +this.secondNum;
+        return this.firstNum + +this.secondNum;
     },
     mul: function () {
-        return +this.firstNum * +this.secondNum;
+        return this.firstNum * +this.secondNum;
     }
 };
 //debugger;
