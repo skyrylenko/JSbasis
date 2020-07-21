@@ -38,7 +38,10 @@ const user = { name: 'Ann', age: 54 };
 const user2 = { ...user };
 user2.age = 40;
 
-user2.sayHi = () => console.log(`Hi from ${user2.name}`);
+//user2.sayHi = () => console.log(`Hi from ${user2.name}`);
+user2.sayHi = function () {
+    console.log(`Hi from ${this.name}`);
+};
 
 let userAges = [user, user2].map(item => item.age);
 const oldestUserAge = Math.max(...userAges);
