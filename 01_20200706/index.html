@@ -4,13 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <title>Document</title>
 </head>
 
 <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Application name", "Index", "Home", null, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
     Hello my first HTML
+    <div class="row row-bordered">
+        <div class="col col-md-4 col-md-push-40">
+            <h2>Левый блок</h2>
+            <p>................</p>
+        </div>
+        <div class="col-md-4">
+            <h2>Средний блок</h2>
+            <p>................</p>
+        </div>
+        <div class="col-md-4 col-md-offset-1">
+            <h2>Правый блок</h2>
+            <p>................</p>
+        </div>
+    </div>
 
-    <script src="Hometask02.js"></script>
+    <!-- <script src="main.js"></script> -->
+    <!-- <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
 </body>
 
 </html>
