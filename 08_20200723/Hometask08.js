@@ -4,11 +4,14 @@
 // Inline style property background with value #aff0ad
 const gridId = document.getElementById("grid-1");
 
-for (let node of gridId.children) {
+for (let node = 0; node < gridId.children.length;) {
     //console.log(node);
     //console.log(inc);
-    node.style.background = "#aff0ad";
+    //gridId.children[node];
+    gridId.children[node].style.background = "#aff0ad";
+    node = node + 2;
 }
+
 
 // Task 2
 // Add class grid-item-background to odd children inside grid-1.
